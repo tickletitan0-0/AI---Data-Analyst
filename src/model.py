@@ -1,12 +1,7 @@
-import pandas as pd
-df = pd.read_csv("data/sample_sales.csv")
+from pydantic import BaseModel
 
-x = df.loc[df["Sales"].idxmax()]
-z = df.loc[df["Sales"].idxmin()]
-y = x["Product"]
-p = z["Product"]
-
-print(df[df["Sales"]>300])
-print(df[df["Sales"]<400])
-
-print(df.groupby("Category")["Sales"].sum())
+class AnalysisReport(BaseModel):
+    total_sales: int
+    average_sales: float
+    best_product: str
+    worst_product: str
