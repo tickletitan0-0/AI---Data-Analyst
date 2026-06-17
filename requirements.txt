@@ -1,0 +1,4 @@
+python
+pydantic
+pandas
+openAI api
