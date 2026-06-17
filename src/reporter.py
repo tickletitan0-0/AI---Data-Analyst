@@ -19,3 +19,13 @@ def generate_report(report):
         file.write(
             f"Worst Product: {report.worst_product}\n"
         )
+    
+def save_ai_summary(summary):
+
+    with open(
+        "reports/ai_summary.txt",
+        "w",
+        encoding="utf-8"
+    ) as file:
+
+        file.write(summary)

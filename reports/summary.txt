@@ -1,4 +1,4 @@
-Total Sales: 1550
-Average Sales: 310.0
-Best Product: Laptop
+Total Sales: 2750
+Average Sales: 550.0
+Best Product: Phone
 Worst Product: Chair

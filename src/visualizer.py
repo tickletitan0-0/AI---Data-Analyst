@@ -1,12 +1,22 @@
 import matplotlib.pyplot as plt
-from model import pqr
 
-pqr.plot(kind="bar")
+def create_bar_chart(df):
 
-plt.title("Sales by Category")
-plt.xlabel("Category")
-plt.ylabel("Sales")
+    grouped = (
+        df.groupby("Category")["Sales"]
+        .sum()
+    )
 
-plt.tight_layout()
+    grouped.plot(kind="bar")
 
-plt.show()
+    plt.title("Sales by Category")
+    plt.xlabel("Category")
+    plt.ylabel("Sales")
+
+    plt.tight_layout()
+
+    plt.savefig(
+        "reports/charts/category_sales.png"
+    )
+
+    plt.close()
