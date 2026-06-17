@@ -1,4 +1,5 @@
-python
-pydantic
 pandas
-openAI api
+matplotlib
+pydantic
+groq
+python-dotenv
